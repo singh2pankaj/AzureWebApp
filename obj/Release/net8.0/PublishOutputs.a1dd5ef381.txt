@@ -1,0 +1,12 @@
+D:\Pankaj\Azure\AzureWebApp\publish\AzureWebApp.exe
+D:\Pankaj\Azure\AzureWebApp\publish\publish\web.config
+D:\Pankaj\Azure\AzureWebApp\publish\appsettings.Development.json
+D:\Pankaj\Azure\AzureWebApp\publish\appsettings.json
+D:\Pankaj\Azure\AzureWebApp\publish\publish\appsettings.Development.json
+D:\Pankaj\Azure\AzureWebApp\publish\publish\appsettings.json
+D:\Pankaj\Azure\AzureWebApp\publish\publish\AzureWebApp.deps.json
+D:\Pankaj\Azure\AzureWebApp\publish\publish\AzureWebApp.runtimeconfig.json
+D:\Pankaj\Azure\AzureWebApp\publish\AzureWebApp.dll
+D:\Pankaj\Azure\AzureWebApp\publish\AzureWebApp.deps.json
+D:\Pankaj\Azure\AzureWebApp\publish\AzureWebApp.runtimeconfig.json
+D:\Pankaj\Azure\AzureWebApp\publish\AzureWebApp.pdb
