@@ -1,0 +1,27 @@
+@model IEnumerable<AzureWebApp.Models.Student>
+
+<h2>Students</h2>
+
+<a href="/Students/Add" class="btn btn-primary">Add Sample</a>
+
+<table class="table table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Course</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach(var s in Model)
+    {
+        <tr>
+            <td>@s.Id</td>
+            <td>@s.Name</td>
+            <td>@s.Age</td>
+            <td>@s.Course</td>
+        </tr>
+    }
+    </tbody>
+</table>
