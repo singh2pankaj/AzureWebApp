@@ -1,0 +1,44 @@
+@model List<string>
+
+<h2>Azure Blob Storage - File Manager</h2>
+
+<form asp-action="Upload" asp-controller="Blob" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <input type="file" name="file" class="form-control" required />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-success">Upload File</button>
+</form>
+
+<hr />
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>File Name</th>
+            <th>Download</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var file in Model)
+        {
+            <tr>
+                <td>@file</td>
+                <td>
+                    <a class="btn btn-primary" 
+                       asp-controller="Blob" 
+                       asp-action="Download" 
+                       asp-route-fileName="@file">Download</a>
+                </td>
+                <td>
+                    <a class="btn btn-danger"
+                       asp-controller="Blob"
+                       asp-action="Delete"
+                       asp-route-fileName="@file">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

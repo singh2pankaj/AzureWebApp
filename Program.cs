@@ -1,5 +1,6 @@
 using AzureWebApp.Data;
 using Microsoft.EntityFrameworkCore;
+using YourProject.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Add Azure Service
+builder.Services.AddSingleton<BlobStorageService>();    
 
 // Add services to the container.
 builder.Services.AddApplicationInsightsTelemetry();
