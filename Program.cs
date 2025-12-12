@@ -1,6 +1,7 @@
 using AzureWebApp.Data;
 using Microsoft.EntityFrameworkCore;
 using YourProject.Services;
+using Azure.Messaging.ServiceBus;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,8 +10,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Add Azure Service
+// Add Azure Blob Service
 builder.Services.AddSingleton<BlobStorageService>();    
+
+// Add Azure Servive Bus 
+builder.Services.AddSingleton<ServiceBusSenderService>();
+builder.Services.AddHostedService<ServiceBusReceiverBackgroundService>();
 
 // Add services to the container.
 builder.Services.AddApplicationInsightsTelemetry();
